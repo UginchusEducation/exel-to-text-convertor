@@ -22,8 +22,6 @@ namespace windows_app
                 string filePath = openFileDialog.FileName;
                 var rows = ExcelReader.ReadExcelFile(filePath);
                 string outputDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "output");
-
-                // Ensure the output directory exists
                 Directory.CreateDirectory(outputDirectory);
 
                 int count = 0;
