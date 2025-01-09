@@ -36,9 +36,9 @@ namespace windows_app
                     string first_name = row.FirstName.Trim();
                     string middle_name = row.MiddleName.Trim();
                     string last_name = row.LastName.Trim();
-                    string info_block = $"{phone}\n{country}\n{military}";
-                    string name_block = $"{last_name}\n{first_name}\n{middle_name}\n{blood}";
-                    string content = $"{info_block}\n\n{name_block}\n\n\n{name_block}\n\n{info_block}";
+                    string info_block = $"{phone}\r\n{country}\r\n{military}";
+                    string name_block = $"{last_name}\r\n{first_name}\r\n{middle_name}\r\n{blood}";
+                    string content = $"{info_block}\r\n\r\n{name_block}\r\n\r\n\r\n{name_block}\r\n\r\n{info_block}";
                     string outputFilePath = Path.Combine(outputDirectory, $"{count}_{last_name}.txt");
                     FileWriter.WriteToFile(outputFilePath, content);
                 }
